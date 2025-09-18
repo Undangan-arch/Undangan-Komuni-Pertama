@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undangan Komuni Suci</title>
+
+  <!-- Open Graph Meta Tags for social sharing -->
+  <!-- PASTIKAN LINK INI ADALAH LINK LANGSUNG/DIRECT DARI PLATFORM HOSTING (misal: Imgur, Cloudinary, atau Dropbox dengan ?raw=1) -->
+  <meta property="og:title" content="Undangan Komuni Suci Pertama Monika Olivia Deru">
+  <meta property="og:description" content="Dengan segala kerendahan hati, kami mengundang Anda untuk hadir dalam perayaan Komuni Suci Pertama putri kami.">
+  <meta property="og:image" content="https://placehold.co/1200x630/d5ecfa/333333?text=Undangan+Komuni+Suci">
+  <meta property="og:url" content="#">
+  <meta property="og:type" content="website">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;500&family=Playfair+Display:wght@600;700&family=Stalemate&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #d5ecfa;
+      --secondary-color: #f7f9fc;
+      --text-color: #333;
+      --accent-color: #8c9eff;
+      --border-radius: 15px;
+    }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background: var(--primary-color);
+      color: var(--text-color); 
+      margin: 0; 
+      overflow-x: hidden;
+    }
+
+    /* Hero section */
+    .hero {
+      min-height: 100vh;
+      background: var(--primary-color);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem;
+      overflow: hidden;
+      transition: opacity 1s ease-in-out; /* Transisi untuk fade out */
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    .hero h2 {
+      font-family: 'Allura', cursive;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .image-container {
+      position: relative;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .hero-main-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: transparent;
+      animation: zoomIn 1s ease-out;
+    }
+
+    /* Ikon dekorasi */
+    .hero-icon { position: absolute; z-index: 2; animation: fadeIn 1s ease-out; }
+    .bird { width: clamp(60px, 16vw, 90px); }
+    .bird-top { top: -45px; left: 50%; transform: translateX(-50%); animation: floatUp 3s ease-in-out infinite alternate, fadeIn 1.5s ease-out; }
+    .bird-left { top: 40%; left: -45px; transform: translateY(-50%); animation: floatLeft 3.5s ease-in-out infinite alternate, fadeIn 1.8s ease-out; }
+    .bird-right { top: 40%; right: -45px; transform: translateY(-50%); animation: floatRight 3.5s ease-in-out infinite alternate, fadeIn 1.8s ease-out; }
+    .flower { bottom: -30px; left: 50%; transform: translateX(-50%); width: clamp(220px, 60vw, 280px); animation: floatUp 4s ease-in-out infinite alternate, fadeIn 2s ease-out; }
+
+    .hero p {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: var(--text-color);
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    .btn-invite {
+      margin-top: 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: var(--text-color);
+      animation: pulse 2s infinite;
+      padding: 1rem 2.5rem;
+      border: 2px solid var(--text-color);
+      border-radius: 50px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-invite:hover {
+      background-color: var(--text-color);
+      color: var(--primary-color);
+    }
+    
+    /* Animasi */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0) translateX(-50%); }
+      to { transform: translateY(-10px) translateX(-50%); }
+    }
+    @keyframes floatLeft {
+      from { transform: translateX(0) translateY(-50%); }
+      to { transform: translateX(-10px) translateY(-50%); }
+    }
+    @keyframes floatRight {
+      from { transform: translateX(0) translateY(-50%); }
+      to { transform: translateX(10px) translateY(-50%); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0.2); }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+    }
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    .rotate { animation: rotate 2s linear infinite; }
+
+    .main-content {
+      display: none;
+      background: #f7f9fc;
+      padding: 2rem 0;
+      opacity: 0; /* Awalnya tidak terlihat */
+      transition: opacity 1s ease-in-out; /* Transisi untuk fade in */
+    }
+    .section-divider {
+      position: relative;
+      margin: 4rem 0;
+      height: 2px;
+      background: var(--text-color);
+      opacity: 0.1;
+    }
+    .section-divider .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      background: var(--secondary-color);
+      padding: 0 1rem;
+    }
+    .section-card {
+      background: #fff;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .font-allura { font-family: 'Allura', cursive; }
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .date-time {
+      background: var(--accent-color);
+      color: #fff;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+    }
+    .date-time span { font-size: 1.2rem; }
+    .btn-map {
+      background-color: var(--accent-color);
+      color: #fff;
+      border-radius: 50px;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .btn-map:hover { background-color: #6a7eff; }
+    #music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: var(--border-radius);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<section id="cover" class="hero">
+  <div class="d-flex flex-column align-items-center" style="transform: translateY(-5vh);">
+    <h1>Undangan</h1>
+    <h2>Komuni Suci Pertama</h2>
+  </div>
+  <div class="image-container" style="transform: translateY(-5vh);">
+    <img src="https://www.dropbox.com/scl/fi/q64g80zwd4qh8viskx6cz/Ikon-Foto.png?rlkey=9k3eiacg66nsc22mhe83bf5ey&st=24dztwep&dl=1" alt="Foto Anak" class="hero-main-photo">
+    <img src="https://www.dropbox.com/scl/fi/rozfofqm6wjhxuz9vstts/burung-atas.png?rlkey=ng12tcd61gtcwujx2abplvk4q&st=yoqkylqe&dl=1" alt="Ikon Burung Atas" class="hero-icon bird bird-top">
+    <img src="https://www.dropbox.com/scl/fi/8ohxkhdnaf9w9popgp923/burung-kiri.png?rlkey=u21v4u5sjmdwmcdktj7t9kl39&st=aelryopk&dl=1" alt="Ikon Burung Kiri" class="hero-icon bird bird-left">
+    <img src="https://www.dropbox.com/scl/fi/a614hisprz2r8u6rnhkw2/burung-kanan.png?rlkey=7mpg615aaxfi9pkxfj22doh2f&st=xbj7y0z6&dl=1" alt="Ikon Burung Kanan" class="hero-icon bird bird-right">
+    <img src="https://www.dropbox.com/scl/fi/58ub0tojui6efesl5i0i1/bunga.png?rlkey=5p7zz6ca5iaydk383yzeufgre&st=xlsihdmn&dl=1" alt="Ikon Bunga" class="hero-icon flower">
+  </div>
+  <p style="transform: translateY(-5vh);">Kepada Yth.<br>Bapak, Ibu, Saudara/i</p>
+  <a href="#" id="open-invite-btn" class="btn-invite" style="transform: translateY(-5vh);">Buka Undangan</a>
+</section>
+
+<div id="main-content" class="main-content">
+  <div class="container py-5">
+    <section id="undangan" class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-4 font-playfair">Kami Mengundang Anda</h2>
+      <p class="lead" data-aos="fade-up" data-aos-delay="100">
+        Dengan segala kerendahan hati, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu dalam perayaan syukur atas karunia Komuni Suci Pertama dari Putri kami:
+      </p>
+      <!-- Menggunakan font elegan dan animasi untuk nama anak -->
+      <p class="fw-bold mt-4 font-allura" style="font-size: 2.2rem;" data-aos="zoom-in" data-aos-delay="200">Monika Olivia Deru (Livia)</p>
+      <p class="mt-4" data-aos="fade-up" data-aos-delay="300">
+        "Barang siapa makan daging-Ku<br>dan minum darah-Ku<br>Ia tinggal di dalam Aku dan Aku di dalam dia" (Yoh. 6 : 56)
+      </p>
+    </section>
+    
+    <!-- Bagian Turut Mengundang -->
+    <div class="section-divider"><i class="fa-solid fa-hands-clapping icon"></i></div>
+
+    <section id="turut-mengundang" class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-3 font-allura" data-aos="fade-up">Turut Mengundang</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Bapak Hermenigildus Wele dan Mama Magdalena Kedhi<br>
+        Kaka Us Delo dan Kaka Yanti Ninu<br>
+        Kaka Ertus Demu dan Kaka Beti Edo<br>
+        Kaka Erin Angi<br>
+        Kaka Loris Rato
+      </p>
+    </section>
+    
+    <div class="section-divider"><i class="fa-solid fa-cross icon"></i></div>
+
+    <section id="lokasi-acara" class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-4 font-allura">Waktu dan Tempat Acara</h2>
+      <div class="date-time" data-aos="zoom-in">
+        <span>Kamis</span>
+        26 September 2025
+        <div style="font-size:2rem; margin-top:0.5rem;">Pukul 08.00 WITA - Selesai</div>
+      </div>
+      <div class="details mt-4" data-aos="fade-up">
+        <h4>Pemberkatan</h4>
+        <p class="fw-semibold">Kapela St. Sebastian Pomasule</p>
+        <h4 class="mt-4">Resepsi</h4>
+        <p class="fw-semibold">Rumah Mama. Magdalena Kedhi,<br>Sebowuli-pomasule Dekat Pertigaan SDI GELAROJA</p>
+      </div>
+    </section>
+    
+    <div class="section-divider"><i class="fa-solid fa-map-location-dot icon"></i></div>
+
+    <section id="maps-resepsi" class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-4 font-allura">Lihat Peta</h2>
+      <div class="map-container" data-aos="fade-up">
+        <iframe src="https://maps.google.com/maps?q=-8.912021,120.905843&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <a href="https://maps.google.com/maps?q=-8.912021,120.905843" target="_blank" class="btn-map mt-4 d-inline-block">Buka di Google Maps</a>
+    </section>
+
+    <div class="section-divider"><i class="fa-solid fa-clock icon"></i></div>
+
+    <section id="countdown" class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-4 font-allura">Hitung Mundur</h2>
+      <div class="row justify-content-center">
+        <div class="col-3"><h3 id="days" class="fw-bold" data-aos="fade-up" data-aos-delay="100">0</h3><p data-aos="fade-up" data-aos-delay="150">Hari</p></div>
+        <div class="col-3"><h3 id="hours" class="fw-bold" data-aos="fade-up" data-aos-delay="200">0</h3><p data-aos="fade-up" data-aos-delay="250">Jam</p></div>
+        <div class="col-3"><h3 id="minutes" class="fw-bold" data-aos="fade-up" data-aos-delay="300">0</h3><p data-aos="fade-up" data-aos-delay="350">Menit</p></div>
+        <div class="col-3"><h3 id="seconds" class="fw-bold" data-aos="fade-up" data-aos-delay="400">0</h3><p data-aos="fade-up" data-aos-delay="450">Detik</p></div>
+      </div>
+    </section>
+
+    <div class="section-divider"><i class="fa-solid fa-images icon"></i></div>
+
+    <section id="galeri" class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-4 font-allura">Galeri</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-4" data-aos="zoom-in"><a href="https://www.dropbox.com/scl/fi/ja5vht1pa5aho7n5m476m/WhatsApp-Image-2025-09-18-at-14.53.55_2e17bbfc.jpg?rlkey=g8ikr4suyb7qmwy0g97se1mvm&st=pb4miiob&dl=1" data-lightbox="gallery"><img src="https://www.dropbox.com/scl/fi/ja5vht1pa5aho7n5m476m/WhatsApp-Image-2025-09-18-at-14.53.55_2e17bbfc.jpg?rlkey=g8ikr4suyb7qmwy0g97se1mvm&st=pb4miiob&dl=1" alt="Foto 1" class="img-fluid rounded"></a></div>
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="100"><a href="https://www.dropbox.com/scl/fi/4s2rmrd1xre80z84n6z9a/WhatsApp-Image-2025-09-18-at-14.53.57_aa9564f8.jpg?rlkey=qvmc8v6xilu2b6cdv9mlw9qey&st=a41opsh4&dl=1" data-lightbox="gallery"><img src="https://www.dropbox.com/scl/fi/4s2rmrd1xre80z84n6z9a/WhatsApp-Image-2025-09-18-at-14.53.57_aa9564f8.jpg?rlkey=qvmc8v6xilu2b6cdv9mlw9qey&st=a41opsh4&dl=1" alt="Foto 2" class="img-fluid rounded"></a></div>
+      </div>
+    </section>
+
+    <div class="section-divider"><i class="fa-solid fa-heart icon"></i></div>
+
+    <section class="text-center section-card" data-aos="fade-up">
+      <h2 class="mb-3 font-allura">Terima Kasih</h2>
+      <p class="lead" data-aos="fade-up" data-aos-delay="100">
+        Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i sekalian, kami ucapkan terima kasih.
+      </p>
+      <!-- Bagian Hormat Kami dipindahkan ke sini -->
+      <p class="mt-4 fw-bold" data-aos="fade-up" data-aos-delay="200">Hormat Kami,<br>Keluarga Besar Bpk. Hermenigildus Wele dan Mama Magdalena Kedhi</p>
+    </section>
+
+  </div>
+</div>
+
+<audio id="bg-music" src="https://www.dropbox.com/scl/fi/lq3v3cjkff3cg6jsvv8at/Here-I-Am-Lord-_-Instrumental-Piano-2B9KrS5tfz8.mp3?rlkey=7xryk08mrpkx4pvveqeuzi8n2&st=mypceb2y&dl=1" loop></audio>
+<button id="music-btn" style="display:none;"><i class="fa-solid fa-circle-play"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  window.onload = function() {
+    AOS.init({ duration: 1200, once: false, mirror: true });
+
+    // Set tanggal acara ke 26 September 2025 pukul 08:00
+    var eventDate = new Date("September 26, 2025 08:00:00").getTime();
+    setInterval(function() {
+      var now = new Date().getTime();
+      var distance = eventDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+    }, 1000);
+
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+    let isPlaying = false;
+    const openInviteBtn = document.getElementById('open-invite-btn');
+    const coverSection = document.getElementById('cover');
+    const mainContent = document.getElementById('main-content');
+    
+    // Set volume awal ke 0 agar bisa di-fade in
+    music.volume = 0;
+
+    openInviteBtn.addEventListener('click', () => {
+      // Mulai animasi fade out pada halaman cover
+      coverSection.style.opacity = '0';
+
+      // Setelah animasi selesai, sembunyikan halaman cover dan tampilkan halaman utama
+      setTimeout(() => {
+        coverSection.style.display = 'none';
+        mainContent.style.display = 'block';
+
+        // Mulai animasi fade in pada halaman utama
+        setTimeout(() => {
+          mainContent.style.opacity = '1';
+        }, 10);
+
+        // Putar musik jika belum diputar dan jalankan fade in
+        if (!isPlaying) { 
+          music.play();
+          musicBtn.innerHTML = '<i class="fa-solid fa-compact-disc rotate"></i>'; 
+          isPlaying = true;
+
+          // Fade in audio
+          const fadeInterval = setInterval(() => {
+            if (music.volume < 0.5) { // Atur volume maksimum di sini
+              music.volume += 0.02; // Naikkan volume secara bertahap
+            } else {
+              clearInterval(fadeInterval); // Hentikan interval saat volume mencapai target
+            }
+          }, 200); // Kecepatan fade in (dalam milidetik)
+        }
+        musicBtn.style.display = 'flex';
+        AOS.refresh();
+      }, 1000); // Durasi ini harus sama dengan durasi transisi opacity pada CSS
+    });
+
+    musicBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        musicBtn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
+      } else {
+        music.play();
+        musicBtn.innerHTML = '<i class="fa-solid fa-compact-disc rotate"></i>';
+      }
+      isPlaying = !isPlaying;
+    });
+  };
+</script>
+
+</body>
+</html>
